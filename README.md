@@ -30,9 +30,69 @@ The following example game is won by the first player, X:
   $ python --version
   ```
 
+
 **Basic usage**
+* Running this command to start game : 
 
+  ```
+   $ python3 Tic_tac_toe_game.py
+  ```
+  
+* Once you have entered your name the following screen will be showed  
+  
+  ```
+       |   |   
+     7 | 8 | 9  
+       |   |   
+    -----------
+       |   |   
+     4 | 5 | 6  
+       |   |   
+    -----------
+       |   |   
+     1 | 2 | 3  
+       |   |   
+    
+    chose an empty space for X.            
+   
+  ```
+  
+* To play simply choose a free keypad number corresponding to the grid (in this example 7 )
 
+  ```
+       |   |   
+     X | 8 | 9  
+       |   |   
+    -----------
+       |   |   
+     4 | 5 | 6  
+       |   |   
+    -----------
+       |   |   
+     1 | 2 | 3  
+       |   |    
+      
+  ```
+* After the last movement one of the players (User or Pc) wins, in this example PC. 
+
+  ```
+       |   |   
+     X | 8 | O  
+       |   |   
+    -----------
+       |   |   
+     X | X | O  
+       |   |   
+    -----------
+       |   |   
+     1 | 2 | O  
+       |   |    
+      
+    Result: Computer Wins  
+    
+  ```
+
+  
 ## Authors
 
 * **Mario Egidio Carricato** - *Erasmus student AGH* - 
