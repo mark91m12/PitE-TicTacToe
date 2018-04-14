@@ -22,19 +22,18 @@ The following example game is won by the first player, X:
 * For run this project is important to use python version 3 or upper.                                                    
   Install it with:
   
-  ```
+  ```shell
    $ sudo apt-get install python3
   ```
   now check your version: 
-  ```
+  ```shell
   $ python --version
   ```
-
 
 **Basic usage**
 * Running this command to start game : 
 
-  ```
+  ```shell
    $ python3 Tic_tac_toe_game.py
   ```
   
@@ -91,9 +90,13 @@ The following example game is won by the first player, X:
     Result: Computer Wins  
     
   ```
-
+**Running the Tests**
+In order to run all tests you simply need to write the following command :
+  ```shell
+    $ python3 Test_game_default.py
+  ```
   
 ## Authors
 
-* **Mario Egidio Carricato** - *Erasmus student AGH* - 
-* **Marco Amato** - *Erasmus student AGH* - 
+* **Mario Egidio Carricato** - *Erasmus student AGH* - [other projects](https://github.com/mario181091)
+* **Marco Amato** - *Erasmus student AGH* - [other projects](https://github.com/mark91m12)
