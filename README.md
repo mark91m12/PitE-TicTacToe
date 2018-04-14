@@ -13,10 +13,9 @@ The following example game is won by the first player, X:
 
 
 ## Getting Started
-See a basic explanation of Tic Tac Toe works
 
 **Prerequisites**
-* For run this project is important to have python version 3 or upper.                                                    
+* For run this project is important to use python version 3 or upper.                                                    
   Install it with:
   
   ```
@@ -27,8 +26,8 @@ See a basic explanation of Tic Tac Toe works
   $ python --version
   ```
 
-
 **Basic usage**
+
 
 ## Authors
 
