@@ -12,43 +12,112 @@ player = Player()
 
 class TestGame(unittest.TestCase):
 
-    def test_winner_in_row(self):
+    def test_winner_in_row1(self):
         grid_obj.grid[1] = "X"; grid_obj.grid[2] = "X";  grid_obj.grid[3]= "X"
         grid_obj.grid[4] = "O"; grid_obj.grid[5] = "5";  grid_obj.grid[6] = "O"
         grid_obj.grid[7] = "7"; grid_obj.grid[8] = "O";  grid_obj.grid[9] = "O"
 
+        winner_combination_right = [1, 2, 3]
         res = grid_obj.is_winner_player("X")
-        self.assertTrue(res)
+        response_combination = grid_obj.get_winner_combination()
 
-    def test_winner_in_column(self):
+        self.assertTrue(res)
+        self.assertIsInstance(response_combination, list)
+        self.assertEqual(response_combination, winner_combination_right)
+
+    def test_winner_in_row2(self):
+        grid_obj.grid[1] = "O"; grid_obj.grid[2] = "O";  grid_obj.grid[3]= "9"
+        grid_obj.grid[4] = "O"; grid_obj.grid[5] = "5";  grid_obj.grid[6] = "O"
+        grid_obj.grid[7] = "X"; grid_obj.grid[8] = "X";  grid_obj.grid[9] = "X"
+
+        winner_combination_right = [7, 8, 9]
+        res = grid_obj.is_winner_player("X")
+        response_combination = grid_obj.get_winner_combination()
+
+        self.assertTrue(res)
+        self.assertIsInstance(response_combination, list)
+        self.assertEqual(response_combination, winner_combination_right)
+
+    def test_winner_in_row3(self):
+        grid_obj.grid[1] = "X"; grid_obj.grid[2] = "X";  grid_obj.grid[3]= "9"
+        grid_obj.grid[4] = "O"; grid_obj.grid[5] = "O";  grid_obj.grid[6] = "O"
+        grid_obj.grid[7] = "X"; grid_obj.grid[8] = "X";  grid_obj.grid[9] = "O"
+
+        winner_combination_right = [4, 5, 6]
+        res = grid_obj.is_winner_player("O")
+        response_combination = grid_obj.get_winner_combination()
+
+        self.assertTrue(res)
+        self.assertIsInstance(response_combination, list)
+        self.assertEqual(response_combination, winner_combination_right)
+
+    def test_winner_in_column1(self):
+
         grid_obj.grid[1] = "O"; grid_obj.grid[2] = "2";  grid_obj.grid[3]= "X"
         grid_obj.grid[4] = "O"; grid_obj.grid[5] = "5";  grid_obj.grid[6] = "O"
         grid_obj.grid[7] = "O"; grid_obj.grid[8] = "X";  grid_obj.grid[9] = "O"
 
+        winner_combination_right = [1, 4, 7]
         res = grid_obj.is_winner_player("O")
-        self.assertTrue(res)
+        response_combination = grid_obj.get_winner_combination()
 
-    def test_winner_in_diagonal(self):
+        self.assertTrue(res)
+        self.assertIsInstance(response_combination, list)
+        self.assertEqual(response_combination, winner_combination_right)
+
+    def test_winner_in_column2(self):
+        grid_obj.grid[1] = "O"; grid_obj.grid[2] = "X";  grid_obj.grid[3]= "X"
+        grid_obj.grid[4] = "4"; grid_obj.grid[5] = "X";  grid_obj.grid[6] = "O"
+        grid_obj.grid[7] = "7"; grid_obj.grid[8] = "X";  grid_obj.grid[9] = "O"
+
+        winner_combination_right = [2, 5, 8]
+        res = grid_obj.is_winner_player("X")
+        response_combination = grid_obj.get_winner_combination()
+
+        self.assertTrue(res)
+        self.assertIsInstance(response_combination, list)
+        self.assertEqual(response_combination, winner_combination_right)
+
+    def test_winner_in_column3(self):
+        grid_obj.grid[1] = "X"; grid_obj.grid[2] = "2";  grid_obj.grid[3]= "O"
+        grid_obj.grid[4] = "O"; grid_obj.grid[5] = "5";  grid_obj.grid[6] = "O"
+        grid_obj.grid[7] = "O"; grid_obj.grid[8] = "X";  grid_obj.grid[9] = "O"
+
+        winner_combination_right = [3, 6, 9]
+        res = grid_obj.is_winner_player("O")
+        response_combination = grid_obj.get_winner_combination()
+
+        self.assertTrue(res)
+        self.assertIsInstance(response_combination, list)
+        self.assertEqual(response_combination, winner_combination_right)
+
+    def test_winner_in_diagonal1(self):
         grid_obj.grid[1] = "X"; grid_obj.grid[2] = "O";  grid_obj.grid[3]= "X"
         grid_obj.grid[4] = "4"; grid_obj.grid[5] = "X";  grid_obj.grid[6] = "O"
         grid_obj.grid[7] = "7"; grid_obj.grid[8] = "8";  grid_obj.grid[9] = "X"
 
+        winner_combination_right = [1, 5, 9]
         res = grid_obj.is_winner_player("X")
-        self.assertTrue(res)
-
-    def test_winner_combination(self):
-        grid_obj.grid[1] = "X"; grid_obj.grid[2] = "X";  grid_obj.grid[3]= "O"
-        grid_obj.grid[4] = "O"; grid_obj.grid[5] = "O";  grid_obj.grid[6] = "O"
-        grid_obj.grid[7] = "X"; grid_obj.grid[8] = "O";  grid_obj.grid[9] = "X"
-        winner_combination_right = [4, 5, 6]
-        res = grid_obj.is_winner_player("O")
-
-        self.assertTrue(res)
         response_combination = grid_obj.get_winner_combination()
+
+        self.assertTrue(res)
         self.assertIsInstance(response_combination, list)
         self.assertEqual(response_combination, winner_combination_right)
 
-    def test_get_winner_player(self):
+    def test_winner_in_diagonal2(self):
+        grid_obj.grid[1] = "X"; grid_obj.grid[2] = "O";  grid_obj.grid[3]= "X"
+        grid_obj.grid[4] = "O"; grid_obj.grid[5] = "X";  grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "X"; grid_obj.grid[8] = "8";  grid_obj.grid[9] = "9"
+
+        winner_combination_right = [3,5,7]
+        res = grid_obj.is_winner_player("X")
+        response_combination = grid_obj.get_winner_combination()
+
+        self.assertTrue(res)
+        self.assertIsInstance(response_combination, list)
+        self.assertEqual(response_combination, winner_combination_right)
+
+    def test_check_who_wins(self):
         grid_obj.grid[1] = "X"; grid_obj.grid[2] = "X";  grid_obj.grid[3]= "O"
         grid_obj.grid[4] = "O"; grid_obj.grid[5] = "X";  grid_obj.grid[6] = "X"
         grid_obj.grid[7] = "O"; grid_obj.grid[8] = "X";  grid_obj.grid[9] = "O"
