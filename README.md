@@ -96,6 +96,9 @@ In order to run all tests you simply need to write the following command :
     $ python3 Test_game_default.py
   ```
   
+  
+ [![Coverage Status](https://coveralls.io/repos/github/mark91m12/PitE-TicTacToe/badge.svg?branch=master)](https://coveralls.io/github/mark91m12/PitE-TicTacToe?branch=master) 
+  
 ## Authors
 
 * **Mario Egidio Carricato** - *Erasmus student AGH* - [other projects](https://github.com/mario181091)
