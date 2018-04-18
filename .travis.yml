@@ -4,11 +4,11 @@ python:
   - "3.6"
 
 # command to install dependencies
-install:
-  - pip install codecov
+install:  
+  - pip install python-coveralls
 
 script:
   - coverage run Test_game_default.py
 
 after_success:
-  - "sbt coveralls"
+  - coveralls
