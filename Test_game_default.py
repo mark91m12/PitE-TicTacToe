@@ -322,5 +322,10 @@ class TestGame(unittest.TestCase):
         self.assertNotEqual(wrong_symbol, response_symbol)
 
 
+    def test_input_name(self):
+        test_player = Player()
+        test_player.insert_player_name("Adam")
+        self.assertEqual("Adam",test_player.name)
+
 if __name__ == '__main__':
     unittest.main()

@@ -4,9 +4,8 @@ class Player:
         self.type = "X"
         self.name = "Player1"
 
-    def insert_player_name(self):
-        print ("Hello player, you are welcome....")
-        self.name = input("Insert Your Name \n")
+    def insert_player_name(self,name):
+        self.name = name
 
     def get_player_name(self):
         return self.name
