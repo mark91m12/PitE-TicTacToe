@@ -67,6 +67,7 @@ class Grid:
             return False
 
     def victory_combination(self, a, b, c):
+        self.victory.clear()
         self.victory.append(a)
         self.victory.append(b)
         self.victory.append(c)

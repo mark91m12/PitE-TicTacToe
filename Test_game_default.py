@@ -39,7 +39,7 @@ class TestGame(unittest.TestCase):
     def test_winner_combination(self):
         grid_obj.grid[1] = "X"; grid_obj.grid[2] = "X";  grid_obj.grid[3]= "O"
         grid_obj.grid[4] = "O"; grid_obj.grid[5] = "O";  grid_obj.grid[6] = "O"
-        grid_obj.grid[7] = "X"; grid_obj.grid[8] = "X";  grid_obj.grid[9] = "O"
+        grid_obj.grid[7] = "X"; grid_obj.grid[8] = "O";  grid_obj.grid[9] = "X"
         winner_combination_right = [4, 5, 6]
         res = grid_obj.is_winner_player("O")
 
