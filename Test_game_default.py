@@ -1,5 +1,7 @@
 import unittest
 import os
+import os.path
+
 
 from Grid import Grid
 from Computer import Computer
@@ -624,6 +626,12 @@ class TestGame(unittest.TestCase):
 
         response_symbol = player.get_player_name()
         self.assertEqual(player_name, response_symbol)
+
+    def test_input_player_name(self):
+        self.name = player.insert_player_name()
+        player_name = player.get_player_name()
+
+        self.assertEqual(self.name, player_name)
 
 
 if __name__ == '__main__':
