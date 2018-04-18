@@ -11,4 +11,4 @@ script:
   - coverage run Test_game_default.py
 
 after_success:
-  - coveralls
+  - "sbt coveralls"
