@@ -167,6 +167,22 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+        grid_obj.grid[1] = "X";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "X"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 2
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "X"; grid_obj.grid[3] = "X"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 1
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
 
     def test_defense_computer_ai_second_row(self):
         grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
@@ -177,6 +193,24 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "X";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "X"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "O"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 5
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "X"; grid_obj.grid[6] = "X"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "O"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 4
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+
     def test_defense_computer_ai_third_row(self):
         grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
         grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
@@ -186,6 +220,21 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "X"; grid_obj.grid[9] = "X"
+        right_cell_to_choice = 7
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "X";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "X"
+        right_cell_to_choice = 8
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
 
 
     def test_defense_computer_ai_first_column(self):
@@ -197,6 +246,23 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+        grid_obj.grid[1] = "X";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "X";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 4
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "X";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "X";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 1
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
 
     def test_defense_computer_ai_second_column(self):
         grid_obj.grid[1] = "1";  grid_obj.grid[2] = "X"; grid_obj.grid[3] = "3"
@@ -207,11 +273,45 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "X"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "X"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 5
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "X"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "X"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 2
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+
     def test_defense_computer_ai_third_column(self):
         grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "X"
         grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "X"
         grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
         right_cell_to_choice = 9
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "X"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "X"
+        right_cell_to_choice = 6
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "X"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "X"
+        right_cell_to_choice = 3
 
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
@@ -226,6 +326,24 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+        grid_obj.grid[1] = "X";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "X"
+        right_cell_to_choice = 5
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "X"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "X"
+        right_cell_to_choice = 1
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+
     def test_defense_computer_ai_second_diagonal(self):
         grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
         grid_obj.grid[4] = "4";  grid_obj.grid[5] = "X"; grid_obj.grid[6] = "6"
@@ -235,12 +353,47 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "X"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "X";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 5
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "X"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "X"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 7
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+
 
     def test_attack_computer_ai_first_row(self):
         grid_obj.grid[1] = "O";  grid_obj.grid[2] = "O"; grid_obj.grid[3] = "3"
         grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
         grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
         right_cell_to_choice = 3
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+        grid_obj.grid[1] = "O";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "O"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 2
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "O"; grid_obj.grid[3] = "O"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 1
 
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
@@ -255,6 +408,24 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "O";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "O"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "O"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 5
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "O"; grid_obj.grid[6] = "O"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "O"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 4
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
     def test_attack_computer_ai_third_row(self):
         grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
         grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
@@ -264,6 +435,22 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "O"; grid_obj.grid[9] = "O"
+        right_cell_to_choice = 7
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "O";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "O"
+        right_cell_to_choice = 8
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
 
 
     def test_attack_computer_ai_first_column(self):
@@ -275,6 +462,24 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+        grid_obj.grid[1] = "O";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "O";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 4
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "O";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "O";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 1
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+
 
     def test_attack_computer_ai_second_column(self):
         grid_obj.grid[1] = "1";  grid_obj.grid[2] = "O"; grid_obj.grid[3] = "3"
@@ -284,6 +489,26 @@ class TestGame(unittest.TestCase):
 
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "O"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "O"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 5
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "O"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "O"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 2
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+
 
     def test_attack_computer_ai_third_column(self):
         grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "O"
@@ -295,6 +520,24 @@ class TestGame(unittest.TestCase):
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
 
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "O"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "O"
+        right_cell_to_choice = 6
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "O"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "O"
+        right_cell_to_choice = 3
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+
     def test_attack_computer_ai_first_diagonal(self):
         grid_obj.grid[1] = "O";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
         grid_obj.grid[4] = "4";  grid_obj.grid[5] = "O"; grid_obj.grid[6] = "6"
@@ -304,6 +547,25 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+        grid_obj.grid[1] = "O";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "O"
+        right_cell_to_choice = 5
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "O"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "O"
+        right_cell_to_choice = 1
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+
+
     def test_attack_computer_ai_second_diagonal(self):
         grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
         grid_obj.grid[4] = "4";  grid_obj.grid[5] = "O"; grid_obj.grid[6] = "6"
@@ -312,6 +574,48 @@ class TestGame(unittest.TestCase):
 
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "O"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "O";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 5
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "O"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "O"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 7
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+    def test_attack_first_movement_if_grid_is_empty(self):
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 5
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+    def test_attack_first_movement_if_central_cell_is_full(self):
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "X"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertIsInstance(cell_for_defense, int)
+
+
+    def test_player_name(self):
+        player_name = "Player1"
+        response_symbol = player.get_player_name()
+        self.assertEqual(player_name, response_symbol)
+
+
 
     def test_player_symbol(self):
         player_symbol = "X"
