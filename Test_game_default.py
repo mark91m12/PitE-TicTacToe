@@ -592,6 +592,22 @@ class TestGame(unittest.TestCase):
         cell_for_defense = computer.get_move_ai(grid_obj.grid)
         self.assertEqual(cell_for_defense, right_cell_to_choice)
 
+    def test_attack_first_movement_if_grid_is_empty(self):
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "5"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+        right_cell_to_choice = 5
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertEqual(cell_for_defense, right_cell_to_choice)
+
+    def test_attack_first_movement_if_central_cell_is_full(self):
+        grid_obj.grid[1] = "1";  grid_obj.grid[2] = "2"; grid_obj.grid[3] = "3"
+        grid_obj.grid[4] = "4";  grid_obj.grid[5] = "X"; grid_obj.grid[6] = "6"
+        grid_obj.grid[7] = "7";  grid_obj.grid[8] = "8"; grid_obj.grid[9] = "9"
+
+        cell_for_defense = computer.get_move_ai(grid_obj.grid)
+        self.assertIsInstance(cell_for_defense, int)
 
 
     def test_player_symbol(self):
