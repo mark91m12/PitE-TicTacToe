@@ -140,8 +140,7 @@ class TestGame(unittest.TestCase):
 
         if not res_x and not res_o:
             draw = True
-        else:
-            draw = False
+
         self.assertTrue(draw)
 
     def test_is_grid_full(self):
