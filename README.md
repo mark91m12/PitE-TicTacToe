@@ -4,7 +4,7 @@
 
 # PitE-TicTacToe
  
- [![Build Status](https://travis-ci.org/mark91m12/PitE-TicTacToe.svg?branch=master)](https://travis-ci.org/mark91m12/PitE-TicTacToe)     [![Coverage Status](https://coveralls.io/repos/github/mark91m12/PitE-TicTacToe/badge.svg?branch=&service=github)](https://coveralls.io/github/mark91m12/PitE-TicTacToe?branch=master&service=github)     [![HitCount](http://hits.dwyl.io/mark91m12/PitE-TicTacToe.svg)](http://hits.dwyl.io/mark91m12/PitE-TicTacToe)
+ [![Build Status](https://travis-ci.org/mark91m12/PitE-TicTacToe.svg?branch=master)](https://travis-ci.org/mark91m12/PitE-TicTacToe)     [![Coverage Status](https://coveralls.io/repos/github/mark91m12/PitE-TicTacToe/badge.svg?branch=&service=github)](https://coveralls.io/github/mark91m12/PitE-TicTacToe?branch=master&service=github)     [![HitCount](http://hits.dwyl.io/mark91m12/PitE-TicTacToe.svg)](http://hits.dwyl.io/mark91m12/PitE-TicTacToe)    [![M&M](https://img.shields.io/badge/m%26m-projects-blue.svg)](https://img.shields.io/badge/m%26m-projects-blue.svg)
 
 
  
